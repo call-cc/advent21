@@ -23,7 +23,15 @@ func TrimNl(line string) string {
 	return strings.TrimSuffix(line, "\n")
 }
 
-func Convert(lines []string) []int {
+func InputToInts(input string) []int {
+	return linesToInts(splitInput(input))
+}
+
+func splitInput(input string) []string {
+	return strings.Split(input, "\n")
+}
+
+func linesToInts(lines []string) []int {
 	var depths []int
 
 	for _, depth := range lines {
