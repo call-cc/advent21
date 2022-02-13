@@ -7,10 +7,8 @@ import (
 	"strings"
 )
 
-const inputFile = "input.txt"
-
-func SlurpFile() string {
-	input, err := ioutil.ReadFile(inputFile)
+func SlurpFile(file string) string {
+	input, err := ioutil.ReadFile(file)
 
 	if err != nil {
 		log.Fatal(err)
